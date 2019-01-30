@@ -1,3 +1,69 @@
-.p{
-    color: blue;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*body { position:absolute; top:0; bottom:0; right:0; left:0; }*/
+
+.header{
+    /*border: 3px solid #73AD21;*/
+    width: 100%;
+    height: 3rem;
+    /*position: fixed;*/
+    position: absolute;
+    top: 0;
+    background-color: aquamarine;
+    z-index: 2;
+}
+
+.main{
+    position: absolute;
+    width: 100%;
+    font-size: 0rem;
+    /*border: 3px solid rgb(204, 21, 60);*/
+}
+
+.sidebar{
+   
+    background-color: #8a2be27d;
+    width: 20%;
+    position: sticky;
+    top:0;
+    margin-top: 3rem;
+    left: 0;
+    z-index: 1;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    /*float: left;    */
+}
+
+.content{
+    background-color: chocolate;
+    width: 80%;
+    /*position: absolute;*/
+    top:3rem;
+    left:20%;
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 3rem;
+
+    /*padding:1rem;*/
+    /*float: right;*/
+}
+.content1{
+    padding: 1rem;
+}
+
+.sidebar a{
+    display: block;
+    border-bottom: 1px solid #9E9E9E;
+    padding: .5rem;
+    text-transform: uppercase;
+    background-color: aliceblue;
+}
+
+.brandName{
+    text-align: center;
+    position: absolute;
 }
