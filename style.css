@@ -26,16 +26,16 @@
 
 .sidebar{
    
-    width: 20%;
+    width: calc(20% - 3px);
+    padding-right: 3px;
     position: sticky;
     top:0;
     margin-top: 4rem;
     left: 0;
-    z-index: 1;
     font-size: 1rem;
     display: inline-block;
     vertical-align: top;
-    box-shadow: 1px 0 9px grey;
+    
     /*float: left;    */
 }
 
@@ -48,7 +48,7 @@
     font-size: 2rem;
     display: inline-block;
     margin-top: 3rem;
-
+    box-shadow: 1px 1px 9px grey;
     /*padding:1rem;*/
     /*float: right;*/
 }
@@ -58,18 +58,35 @@
 
 .sidebar a{
     display: block;
-    height: 1.5rem;
+    height: 1.25rem;
     padding: .5rem;
     text-transform: uppercase;
-    background-color: aliceblue;
     text-decoration: none;
     text-align: center;
+    padding-top: 0.8rem;
 }
-
+.sidebar a:hover{
+    background-color: rgba(66,133,244,0.149);/*#1a73e87d;*/
+    color: #1a73e8;
+    font-weight: bold;
+    border-radius: 0rem 0.7rem 0.7rem 0rem;
+}
 
 
 .nav li{
     display: inline-block;
+}
+.nav li a:hover{
+    background-color: #1a73e8;
+    color: #fff;
+}
+.active{
+    background-color:green;
+    color: #fff;
+}
+.nav li a.active:hover{
+    background-color:green;
+    color: #fff;
 }
 
 .navbar-header {
@@ -104,5 +121,6 @@ li a{
     /*border: 1px solid #28a745;;*/
     border-radius: 0.2rem;
     color:#1a73e8; /* #fff;*/
-    font-weight: bold
+    font-weight: bold;
+    transition-duration: 1s;
 }
