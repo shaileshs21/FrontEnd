@@ -48,7 +48,7 @@
     font-size: 2rem;
     display: inline-block;
     margin-top: 3rem;
-    box-shadow: 1px 1px 9px grey;
+    box-shadow: -2px -6px 9px grey;
     /*padding:1rem;*/
     /*float: right;*/
 }
@@ -72,7 +72,23 @@
     border-radius: 0rem 0.7rem 0.7rem 0rem;
 }
 
-
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.submenu{
+    display: block;
+    max-height: 0;
+    transition: max-height 1s;
+    overflow: hidden;
+}
 .nav li{
     display: inline-block;
 }
