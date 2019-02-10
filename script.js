@@ -21,9 +21,9 @@ for(i = 0;i < coll.length;i++){
 
 
 function collapseAnimate(){
-    
+
     coll[coll.length-1].nextElementSibling.style.maxHeight = null;
- 
+    console.log(this);
 
     var submenu = this.nextElementSibling;
     if(submenu.style.maxHeight){
