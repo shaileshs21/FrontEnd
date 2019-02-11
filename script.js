@@ -54,7 +54,7 @@ function minimize(){
     var sidebar = document.getElementsByClassName("sidebar");
     //sidebar.style.maxWidth = "0px";
 
-    console.log(sidebar);
+    console.log(sidebar[0].style.maxWidth);
    // sidebar.classList.toggle("sidebarWidth");
  
 }
