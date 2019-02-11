@@ -21,17 +21,28 @@ for(i = 0;i < coll.length;i++){
 
 
 function collapseAnimate(){
-
-    coll[coll.length-1].nextElementSibling.style.maxHeight = null;
-    console.log(this);
-    this.classList.toggle("open"); 
+    
+    //console.log(this == coll[0]);
+    this.classList.toggle("open");
     var submenu = this.nextElementSibling;
-    if(submenu.style.maxHeight){
+    if(submenu.style.maxHeight){ /*if open */
+        /* closing */
         submenu.style.maxHeight = null;
+
+        for(i = coll.length - 1 ;i >= 0; i--){
+            if(coll[i] == this){
+                break;
+            }
+            else{
+                if(coll[i].nextElementSibling.style.maxHeight){
+                    coll[i].nextElementSibling.style.maxHeight = null;
+                    coll[i].classList.toggle("open");
+                } 
+            }
+        }
     }
     else{
         submenu.style.maxHeight = "300px";
-
     }
 }
 
