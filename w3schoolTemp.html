@@ -20,16 +20,18 @@
 
 .content {
   padding: 0 18px;
-  display: none;
+  display: block;
+  max-height: 0;
   overflow: hidden;
   background-color: #2e8ab3;
+  transition: max-height 1s;
 }
 
 </style>
 </head>
 <body>
 
-  <button class="collapsible">Open Collapsible</button>
+  <button class="collapsible">Open Collapsible  <span>></span></button>
   <div class="content">
     <p>class element 1</p>
   </div>
@@ -39,6 +41,18 @@
 
 <script>
   var coll = document.getElementsByClassName("collapsible");
+  coll[0].addEventListener("click",collapseAnimate);
+
+  function collapseAnimate(){
+    var submenu = this.nextElementSibling;
+    if(submenu.style.maxHeight){
+        submenu.style.maxHeight = null;
+    }
+    else{
+        submenu.style.maxHeight = "10%";
+
+    }
+  }
 </script>
 </body>
 </html>

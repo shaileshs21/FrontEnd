@@ -27,28 +27,30 @@
 .sidebar{
    
     width: calc(20% - 3px);
+    height: -webkit-fill-available;
+    box-shadow: -1px 0px 8px grey;
     padding-right: 3px;
     position: sticky;
     top:0;
-    margin-top: 4rem;
+    margin-top: 3rem;
     left: 0;
     font-size: 1rem;
     display: inline-block;
     vertical-align: top;
-    
+    overflow: hidden;
+    max-width: 300px;
+    transition: max-width 1.5s;
     /*float: left;    */
 }
 
 .content{
     background-color: #fff;
     width: 80%;
-    /*position: absolute;*/
     top:3rem;
     left:20%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: inline-block;
     margin-top: 3rem;
-    box-shadow: -2px -6px 9px grey;
     /*padding:1rem;*/
     /*float: right;*/
 }
@@ -60,28 +62,48 @@
     display: block;
     height: 1.25rem;
     padding: .5rem;
-    text-transform: uppercase;
     text-decoration: none;
-    text-align: center;
+    padding-left: 3rem;
     padding-top: 0.8rem;
+    color: #6e6e6e;
 }
 .sidebar a:hover{
-    background-color: rgba(66,133,244,0.149);/*#1a73e87d;*/
-    color: #1a73e8;
-    font-weight: bold;
+    background-color: #dbdbdb;
+    color: #1976d2;
+    text-shadow: 0 0 5px #fff;
     border-radius: 0rem 0.7rem 0.7rem 0rem;
 }
 
 .collapsible {
-    background-color: #777;
-    color: white;
+    background-color: #fff;
+    color: #1a73e8;
     cursor: pointer;
-    padding: 18px;
+    padding:0.8rem 2rem;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
+    text-transform: uppercase;
+    font-family: auto;
+    
+}
+.collapsible:hover{
+    background-color: rgba(66,133,244,0.149);
+}
+.collapsible:after {
+    content: '>';
+    color: #1a73e8;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition:content 1s, transform 1s;
+}
+.open:after {
+ transform: rotate(90deg);
+}
+.open{
+    background-color: rgba(66,133,244,0.149);
 }
 .submenu{
     display: block;
