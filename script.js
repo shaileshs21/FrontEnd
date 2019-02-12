@@ -59,13 +59,22 @@ function collapse(){
 */
 
 /*  Sidebar Minimize */
+ var sidebar = document.getElementsByClassName("sidebar");
+ sidebar[0].style.maxWidth = "300px";
 
 function minimize(){
-    console.log("in Minimize sidebar");
     var sidebar = document.getElementsByClassName("sidebar");
-    //sidebar.style.maxWidth = "0px";
+    var width = sidebar[0].style.maxWidth;
+    var content = document.getElementsByClassName("content");
 
-    console.log(sidebar[0].style.maxWidth);
-   // sidebar.classList.toggle("sidebarWidth");
+    if(width == "300px"){
+        sidebar[0].style.maxWidth = "0px";
+        content[0].style.width="99%";
+    }
+    else{
+        sidebar[0].style.maxWidth = "300px";
+        content[0].style.width="80%";
+    }
+   
  
 }
