@@ -9,7 +9,7 @@
     /*border: 3px solid #73AD21;*/
     width: 100%;
     height: 3rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     background-color:#fff;
     z-index: 2;
@@ -21,6 +21,7 @@
     position: absolute;
     width: 100%;
     font-size: 0rem;
+    padding-top: 3rem;
     /*border: 3px solid rgb(204, 21, 60);*/
 }
 
@@ -31,8 +32,8 @@
     box-shadow: -1px 0px 8px grey;
     padding-right: 3px;
     position: sticky;
-    top:0;
-    margin-top: 3rem;
+    top:3rem;
+    /*margin-top: 3rem;*/
     left: 0;
     font-size: 1rem;
     display: inline-block;
@@ -51,8 +52,8 @@
     left:20%;
     font-size: 1.5rem;
     display: inline-block;
-    margin-top: 3rem;
-    transition: width 1.5s;
+    /* margin-top: 3rem; */
+   transition: width 1.5s;
     /*padding:1rem;*/
     /*float: right;*/
 }
@@ -76,30 +77,36 @@
     border-radius: 0rem 0.7rem 0.7rem 0rem;
 }
 
-.collapsible {
-    background-color: #fff;
-    color: #1a73e8;
-    cursor: pointer;
-    padding:0.8rem 2rem;
+.collapsein {
+    
     width: 100%;
+    height: 1rem;
+    overflow: hidden;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
     text-transform: uppercase;
     font-family: auto;
+    background-color: #fff;
     
 }
 .collapsible:hover{
     background-color: #4285f466;
 }
-.collapsible:after {
+.collapsein:after {
     content: '>';
     color: #1a73e8;
     font-weight: bold;
     float: right;
     margin-left: 5px;
     transition:content 1s, transform 1s;
+}
+.collapsible{
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #1a73e8;
+    cursor: pointer;
 }
 .open:after {
  transform: rotate(90deg);

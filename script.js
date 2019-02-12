@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded",function(){
     }
 })
 /* Collapsible Side Menus */
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("collapsein");
 var i;
 for(i = 0;i < coll.length;i++){
     coll[i].addEventListener("click",collapseAnimate);
@@ -62,6 +62,9 @@ function collapse(){
  var sidebar = document.getElementsByClassName("sidebar");
  sidebar[0].style.maxWidth = "300px";
 
+ /*setInterval(minimize, 1000);*/
+
+
 function minimize(){
     var sidebar = document.getElementsByClassName("sidebar");
     var width = sidebar[0].style.maxWidth;
@@ -69,11 +72,11 @@ function minimize(){
 
     if(width == "300px"){
         sidebar[0].style.maxWidth = "0px";
-        content[0].style.width="99%";
+        content[0].style.width= window.innerWidth * 0.9 + "px";
     }
     else{
         sidebar[0].style.maxWidth = "300px";
-        content[0].style.width="80%";
+        content[0].style.width=window.innerWidth * 0.7 + "px";
     }
    
  
