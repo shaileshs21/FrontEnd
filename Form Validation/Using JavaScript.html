@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .formData {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: darkcyan;
+    position: absolute;
+    width: 100%;
+    }
+
+    form {
+        font-size: 30px;
+    }
+
+    form input {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .errorMessage{
+        background-color: white;
+        width: 143px;
+        padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 107px;
+    visibility: hidden;
+    border-radius: 10px;
+    position: relative;
+    float: left;
+    }
+
+    .errorMessage.top-arrow:after {
+        content: " ";
+    position: absolute;
+    right: 90px;
+    top: -15px;
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 15px solid white;
+    }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+<div class = "formData" >
+<form name = "simpleForm" action = "#" onsubmit = "return validateForm()" >
+  Name: <input type = "text" name = "name">
+  <input type = "submit" >
+</form>
+
+<p class = "errorMessage top-arrow" > </p>
+
+</div>
+
+    
+<script>
+    function validateForm(){
+        var nameVal = document.forms["simpleForm"]["name"].value;
+        if(nameVal == null || nameVal == ""){
+            document.getElementsByClassName( "errorMessage" )[0].style.visibility = "visible";
+            document.getElementsByClassName( "errorMessage" )[0].innerHTML = "Please Fill out this field";
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+
+</body>
+</html>
